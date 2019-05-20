@@ -6,6 +6,6 @@ package com.demo.com.demo.lc;
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("李博涵是阴阳师");
+        System.out.println("阴阳师");
     }
 }
