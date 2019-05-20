@@ -8,4 +8,4 @@
 	来完成认证。通过ModelRealmAuthenticator中的doAuthenticate来获取Realms信息。 
 	如果是单realm：直接将token和realm中的数据惊醒对比，判断是否认证成功；
 	荣国是多realm那么需要通过Authentication Strategy来完成对应的认证工作。
-	2.通过subject.isAuthenticated来判断是否认证成功。
+	2.通过subject.isAuthenticated来判断是否认证成功
