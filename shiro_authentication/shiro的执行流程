@@ -1,0 +1,11 @@
+1.通过shiro相关api，创建securityManager及获取Subject实例
+2.封装token信息
+3.通过subject.login(token)进行用户认证
+	1.subject接受token,通过其实现类DelegatingSubject将token委托给SecurityManager来完成
+	defaulSecurityManager来完成相关的功能。由DefaultSecurityManager中的login来完成认证过程
+	。在login中调用了该类的authenticate()方法来完成认证。该方法是由AuthenticatingManager来完成的
+	在该类中通过调用authenticate(认证器)认证器来完成认证工作。authenticator默认是由默认实现类ModelRealmAuthenticate
+	来完成认证。通过ModelRealmAuthenticator中的doAuthenticate来获取Realms信息。 
+	如果是单realm：直接将token和realm中的数据惊醒对比，判断是否认证成功；
+	荣国是多realm那么需要通过Authentication Strategy来完成对应的认证工作。
+	2.通过subject.isAuthenticated来判断是否认证成功
